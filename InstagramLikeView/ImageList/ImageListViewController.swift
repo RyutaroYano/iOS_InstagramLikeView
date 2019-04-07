@@ -31,7 +31,6 @@ class ImageListViewController: UIViewController {
         // カスタムフローレイアウトを使用する
         let customFlowLayout = CustomCollectionViewFlowLayout()
         self.collectionView.collectionViewLayout = customFlowLayout
-        
     }
 }
 
@@ -73,15 +72,9 @@ extension ImageListViewController: UICollectionViewDataSource, UICollectionViewD
         
         if let cell = cell as? ImageCollectionViewCell {
             if indexPath.section * 3 + indexPath.row - 2 < models.count  {
-                print("セル生成-----------------------------")
-                print("NumberOfSection: \(indexPath.section)")
-                print("NumberOfCellsInSection: \(indexPath.row)")
-                print("NumberOfAllCells: \(indexPath.section == 0 ? indexPath.row : indexPath.section * 3 + indexPath.row - 2)")
-                print("-------------------------------------")
                 cell.setupCell(model: models[indexPath.section == 0 ? indexPath.row : indexPath.section * 3 + indexPath.row - 2])
             }
         }
-        
         return cell
     }
 }

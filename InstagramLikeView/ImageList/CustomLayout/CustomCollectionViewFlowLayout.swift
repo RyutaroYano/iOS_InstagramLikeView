@@ -79,15 +79,15 @@ class CustomCollectionViewFlowLayout: UICollectionViewFlowLayout {
                                 cellwidth = smallCellSideLength
                                 cellheight = smallCellSideLength
                             case 1:
-                                x = super.sectionInset.left
-                                y = (1 * (smallCellSideLength + super.minimumLineSpacing)) + contentSize.height + super.sectionInset.top
-                                cellwidth = smallCellSideLength
-                                cellheight = smallCellSideLength
-                            case 2:
                                 x = smallCellSideLength + super.minimumInteritemSpacing + super.sectionInset.left
                                 y = (0 * (smallCellSideLength + super.minimumLineSpacing)) + contentSize.height + super.sectionInset.top
                                 cellwidth = 2 * smallCellSideLength  + super.minimumInteritemSpacing
                                 cellheight = 2 * smallCellSideLength + super.minimumLineSpacing
+                            case 2:
+                                x = super.sectionInset.left
+                                y = (1 * (smallCellSideLength + super.minimumLineSpacing)) + contentSize.height + super.sectionInset.top
+                                cellwidth = smallCellSideLength
+                                cellheight = smallCellSideLength
                             default :
                                 x = 0; y = 0
                                 cellwidth = 0; cellheight = 0
