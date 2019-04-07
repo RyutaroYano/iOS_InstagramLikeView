@@ -35,20 +35,17 @@ class TabViewController: ButtonBarPagerTabStripViewController {
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         var vcs: [UIViewController] = []
         let table1 =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ImageListViewController") as! ImageListViewController
-        table1.noteBookName = "ALL"
+        table1.noteBookName = "タブ1"
         vcs.append(table1)
         let table2 =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ImageListViewController") as! ImageListViewController
-        table2.noteBookName = "スタッフ"
+        table2.noteBookName = "タブ2"
         vcs.append(table2)
         let table3 =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ImageListViewController") as! ImageListViewController
-        table3.noteBookName = "外観"
+        table3.noteBookName = "タブ3"
         vcs.append(table3)
         let table4 =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ImageListViewController") as! ImageListViewController
-        table4.noteBookName = "内観"
+        table4.noteBookName = "タブ4"
         vcs.append(table4)
-        let table5 =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ImageListViewController") as! ImageListViewController
-        table5.noteBookName = "メニュー"
-        vcs.append(table5)
         return vcs
     }
     
