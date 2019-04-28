@@ -131,8 +131,8 @@
 				6AC5864722583FC900432317 /* AppDelegate.swift */,
 				6AC5867722584BBC00432317 /* ImageList */,
 				6AC5867C22584D7D00432317 /* ImageDetail */,
-				6AC5864B22583FC900432317 /* Main.storyboard */,
 				6AC5867A22584CDF00432317 /* TabView */,
+				6AC5864B22583FC900432317 /* Main.storyboard */,
 				6AC5864E22583FCE00432317 /* Assets.xcassets */,
 				6AC5865022583FCE00432317 /* LaunchScreen.storyboard */,
 				6AC5865322583FCE00432317 /* Info.plist */,
@@ -306,13 +306,16 @@
 				TargetAttributes = {
 					6AC5864322583FC900432317 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					6AC5865722583FCE00432317 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 6AC5864322583FC900432317;
 					};
 					6AC5866222583FCE00432317 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 6AC5864322583FC900432317;
 					};
 				};
@@ -653,7 +656,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ryutaroyano.InstagramLikeView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -672,7 +675,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ryutaroyano.InstagramLikeView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -693,7 +696,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ryutaroyano.InstagramLikeViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstagramLikeView.app/InstagramLikeView";
 			};
@@ -715,7 +718,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ryutaroyano.InstagramLikeViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstagramLikeView.app/InstagramLikeView";
 			};
@@ -736,7 +739,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ryutaroyano.InstagramLikeViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = InstagramLikeView;
 			};
@@ -757,7 +760,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ryutaroyano.InstagramLikeViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = InstagramLikeView;
 			};
