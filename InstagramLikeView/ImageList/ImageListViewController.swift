@@ -14,7 +14,7 @@ class ImageListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let models = ImageModel.createModels()
-    var selectedImage : UIImage?
+    var selectedImageIndex = 0
     var noteBookName: IndicatorInfo = ""
     
     override func viewDidLoad() {
@@ -31,7 +31,6 @@ class ImageListViewController: UIViewController {
         // カスタムフローレイアウトを使用する
         let customFlowLayout = CustomCollectionViewFlowLayout()
         self.collectionView.collectionViewLayout = customFlowLayout
-        
     }
 }
 
@@ -39,7 +38,8 @@ extension ImageListViewController: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // [indexPath.row] から画像名を探し、UImage を設定
-        selectedImage = models[indexPath.section == 0 ? indexPath.row : indexPath.section * 3 + indexPath.row - 2].image
+        let selectedImage = models[indexPath.section == 0 ? indexPath.row : indexPath.section * 3 + indexPath.row - 2].image
+        selectedImageIndex = indexPath.section == 0 ? indexPath.row : indexPath.section * 3 + indexPath.row - 2
         if selectedImage != nil {
             // SubViewController へ遷移するために Segue を呼び出す
             performSegue(withIdentifier: "toImageDetailViewSegue",sender: nil)
@@ -50,8 +50,8 @@ extension ImageListViewController: UICollectionViewDataSource, UICollectionViewD
         if (segue.identifier == "toImageDetailViewSegue") {
             let imgDetailVC: ImageDetailViewController = (segue.destination as? ImageDetailViewController)!
             
-            // ImageDetailViewController のselectedImgに選択された画像を設定する
-            imgDetailVC.selectedImage = selectedImage
+            // ImageDetailViewController のselectedImageIndexに選択された画像のインデックスを設定する
+            imgDetailVC.selectedImageIndex = selectedImageIndex
         }
     }
     
@@ -73,15 +73,9 @@ extension ImageListViewController: UICollectionViewDataSource, UICollectionViewD
         
         if let cell = cell as? ImageCollectionViewCell {
             if indexPath.section * 3 + indexPath.row - 2 < models.count  {
-                print("セル生成-----------------------------")
-                print("NumberOfSection: \(indexPath.section)")
-                print("NumberOfCellsInSection: \(indexPath.row)")
-                print("NumberOfAllCells: \(indexPath.section == 0 ? indexPath.row : indexPath.section * 3 + indexPath.row - 2)")
-                print("-------------------------------------")
                 cell.setupCell(model: models[indexPath.section == 0 ? indexPath.row : indexPath.section * 3 + indexPath.row - 2])
             }
         }
-        
         return cell
     }
 }

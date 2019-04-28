@@ -1,31 +1,29 @@
 //
-//  ImageCollectionViewCell.swift
+//  ImageDetailCell.swift
 //  InstagramLikeView
 //
-//  Created by Ryutaro Yano on 2019/04/06.
+//  Created by Ryutaro Yano on 2019/04/07.
 //  Copyright © 2019 RY. All rights reserved.
 //
 
 import UIKit
 
-class ImageCollectionViewCell: UICollectionViewCell {
+class ImageDetailCell: UICollectionViewCell {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageDetailView: UIImageView!
     
     func setupCell(model: ImageModel) {
-        imageView.image = model.image
+        imageDetailView.image = model.image
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.imageView.contentMode = .scaleAspectFill
+        self.imageDetailView.contentMode = .scaleAspectFit
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        imageView.image = nil
+        imageDetailView.image = nil
     }
-
-
 }
